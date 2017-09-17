@@ -5,21 +5,40 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import {FavoritesPage} from "../pages/favorites/favorites";
+import {SettingsPage} from "../pages/settings/settings";
+import {TabsPage} from "../pages/tabs/tabs";
+import {LibraryPage} from "../pages/library/library";
+import {FavoritesPageModule} from "../pages/favorites/favorites.module";
+import {SettingsPageModule} from "../pages/settings/settings.module";
+import {LibraryPageModule} from "../pages/library/library.module";
+import {QuotePageModule} from "../pages/quote/quote.module";
+import {QuotePage} from "../pages/quote/quote";
+import {TabsPageModule} from "../pages/tabs/tabs.module";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+
+
   ],
   imports: [
     BrowserModule,
+    FavoritesPageModule,
+    SettingsPageModule,
+    LibraryPageModule,
+    QuotePageModule,
+    TabsPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    FavoritesPage,
+    SettingsPage,
+    LibraryPage,
+    QuotePage,
+    TabsPage
   ],
   providers: [
     StatusBar,
