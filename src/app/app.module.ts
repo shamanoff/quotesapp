@@ -15,6 +15,8 @@ import {LibraryPageModule} from "../pages/library/library.module";
 import {QuotePageModule} from "../pages/quote/quote.module";
 import {QuotePage} from "../pages/quote/quote";
 import {TabsPageModule} from "../pages/tabs/tabs.module";
+import {QuotesPage} from "../pages/quotes/quotes";
+import {QuotesPageModule} from "../pages/quotes/quotes.module";
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import {TabsPageModule} from "../pages/tabs/tabs.module";
     LibraryPageModule,
     QuotePageModule,
     TabsPageModule,
+    QuotesPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -38,7 +41,8 @@ import {TabsPageModule} from "../pages/tabs/tabs.module";
     SettingsPage,
     LibraryPage,
     QuotePage,
-    TabsPage
+    TabsPage,
+    QuotesPage
   ],
   providers: [
     StatusBar,
