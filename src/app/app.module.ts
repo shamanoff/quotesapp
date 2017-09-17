@@ -17,6 +17,7 @@ import {QuotePage} from "../pages/quote/quote";
 import {TabsPageModule} from "../pages/tabs/tabs.module";
 import {QuotesPage} from "../pages/quotes/quotes";
 import {QuotesPageModule} from "../pages/quotes/quotes.module";
+import {QuotesService} from "../services/quotes.service";
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import {QuotesPageModule} from "../pages/quotes/quotes.module";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    QuotesService
   ]
 })
 export class AppModule {}
