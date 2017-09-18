@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {IonicPage, NavController, NavParams, Toggle} from 'ionic-angular';
+import {SettingService} from '../../services/setting.service';
 
 /**
  * Generated class for the SettingsPage page.
@@ -15,8 +16,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SettingsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private setStng: SettingService) {
   }
 
+  onToggle(toggle: Toggle){
+    this.setStng.setBg(toggle.checked);
+  }
 
+  checkAltBg(){
+    return this.setStng.isAltBg();
+  }
 }
